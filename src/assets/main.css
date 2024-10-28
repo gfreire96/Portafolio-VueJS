@@ -1,35 +1,36 @@
+/* Importa el archivo CSS base para aplicar estilos globales */
 @import './base.css';
 
+/* Estilos para el contenedor principal de la aplicación */
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  max-width: 1280px; /* Define el ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 2rem; /* Aplica un relleno interno de 2rem en todos los lados */
+  font-weight: normal; /* Establece el peso de la fuente como normal */
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+/* Estilos para los enlaces */
+a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: var(--vt-c-white); /* Define el color del texto del enlace usando una variable CSS */
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
+/* Media query para pantallas pequeñas (máximo 768px de ancho) */
+@media (max-width: 768px) {
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    display: flex; /* Utiliza flexbox para el layout del contenedor */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    font-size: small; /* Reduce el tamaño de la fuente a pequeño */
   }
 }
+
+/* Media query para pantallas medianas a grandes (mínimo 1024px de ancho) */
+@media (min-width: 1024px) {
+  #app {
+    display: flex; /* Utiliza flexbox para el layout del contenedor */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    width: 80%; /* Establece el ancho del contenedor en un 80% */
+  }
+}
+
+
