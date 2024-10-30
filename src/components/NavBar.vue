@@ -1,11 +1,3 @@
-<template>
-<nav class="navbar">
-  <div class="navbar-menu">
-      <a v-for="nav in navegacion" :key="nav.nombre" href="nav.enlace" class="nav-item" >{{nav.nombre}}</a>  
-  </div>
-</nav>
-</template>
-
 <script setup>
 import { ref } from 'vue';
 const navegacion= ref([
@@ -15,6 +7,14 @@ const navegacion= ref([
     {id:4, nombre:'Habilidades', enlace:'#habilidades'}
 ]);
 </script>
+
+<template>
+<nav class="navbar">
+  <div class="navbar-menu">
+      <a v-for="nav in navegacion" :key="nav.nombre" href="nav.enlace" class="nav-item" >{{nav.nombre}}</a>  
+  </div>
+</nav>
+</template>
 
 <style scoped>
   avbar {
